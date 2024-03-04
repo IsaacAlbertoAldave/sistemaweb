@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicación laboral</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row mt-3">
+        <div class="col">
+          <h3>Ubicación laboral de los egresados (as)</h3>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-2">
+          <label>Actividad a la que se dedica actualmente</label>
+        </div>
+        <div class="col-md-2">
+          <select class="form-control mySelect" name="actividadActual" id="actividadActual">
+            <option value="1">Trabaja</option>
+            <option value="2">Estudia</option>
+            <option value="3">Estudia y trabaja</option>
+            <option value="4">No trabaja</option>
+            <option value="5">No estudia ni trabaja</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label>¿Cuál es el motivo o dificultad para conseguir empleo?</label>
+        </div>
+        <div class="col-md-5">
+          <input type="text" name="dificultadEmpleo" id="dificultadEmpleo" class="form-control">
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col">
+          <h3>Expectativas de desarrollo, superación profesional y de actuación</h3>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <label>Con la finalidad de que tengas un mejor desarrollo profesional, ¿te gustaría tomar algún curso?</label>
+          </div>
+          <div class="col-md-2">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="cursoSi" name="cursoOpciones" value="Si">
+              <label class="form-check-label" for="cursoSi">Sí</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="cursoNo" name="cursoOpciones" value="No">
+              <label class="form-check-label" for="cursoNo">No</label>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <label>¿Cuál?</label>
+          </div>
+          <div class="col-md-5">
+            <textarea id="sugerenciaCurso" name="sugerenciaCurso" rows="2" class="form-control" cols="50"></textarea>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-md-4">
+            <label>¿Te gustaría tomar algún posgrado?</label>
+          </div>
+          <div class="col-md-2">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="posgradoSi" name="posgradoOpciones" value="Si">
+              <label class="form-check-label" for="posgradoSi">Sí</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="posgradoNo" name="posgradoOpciones" value="No">
+              <label class="form-check-label" for="posgradoNo">No</label>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <label>¿Cuál?</label>
+          </div>
+          <div class="col-md-5">
+            <textarea id="sugerenciaPosgrado" name="sugerenciaPosgrado" rows="2" class="form-control" cols="50"></textarea>
+          </div>
+        </div>
+      </div>
+
+     <div class="row mt-3">
+        <div class="col">
+          <h3>Participación social de los egresados (as)</h3>
+        </div>
+      </div>
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <label>¿Pertenece a organizaciones sociales?</label>
+          </div>
+          <div class="col-md-2">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="organizacionSocialSi" name="organizacionSocialOpciones" value="Si">
+              <label class="form-check-label" for="organizacionSocialSi">Sí</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="organizacionSocialNo" name="organizacionSocialOpciones" value="No">
+              <label class="form-check-label" for="organizacionSocialNo">No</label>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <label>¿Cuál?</label>
+          </div>
+          <div class="col-md-5">
+            <textarea id="afiliacionOrganizaciones" name="afiliacionOrganizaciones" rows="2" class="form-control" cols="50"></textarea>
+          </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-md-4">
+            <label>¿Pertenece a organismos profesionistas?</label>
+          </div>
+          <div class="col-md-2">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="organizacionProfesionistaSi" name="organizacionProfesionistaOpciones" value="Si">
+              <label class="form-check-label" for="organizacionProfesionistaSi">Sí</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" id="organizacionProfesionistaNo" name="organizacionProfesionistaOpciones" value="No">
+              <label class="form-check-label" for="organizacionProfesionistaNo">No</label>
+            </div>
+          </div>
+          <div class="col-md-1">
+            <label>¿Cuál?</label>
+          </div>
+          <div class="col-md-5">
+            <textarea id="afiliacionOrgProfesionista" name="afiliacionOrgProfesionista" rows="2" class="form-control" cols="50"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col">
+          <h3>Comentarios y sugerencias</h3>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col">
+          <textarea id="comentarios" name="comentarios" rows="4" cols="80" class="form-control"></textarea>
+        </div>
+      </div>
+      
+    </div>
+  </body>
+</html>

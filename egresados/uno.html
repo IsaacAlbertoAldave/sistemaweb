@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulario Centrado con Imagen y Validación</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .card {
+        max-width: 400px;
+        padding: 20px;
+        margin: 0 auto;
+    }
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h2 class="text-center">Formulario de Contacto</h2>
+    <form id="contactForm" onsubmit="return validarFormulario()">
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="mensaje">Mensaje:</label>
+            <textarea class="form-control" id="mensaje" name="mensaje" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+    </form>
+</div>
+
+<script>
+    function validarFormulario() {
+        var nombre = document.getElementById('nombre').value;
+        var email = document.getElementById('email').value;
+        var mensaje = document.getElementById('mensaje').value;
+
+        if (nombre.trim() == '' || email.trim() == '' || mensaje.trim() == '') {
+            alert('Por favor completa todos los campos');
+            return false;
+        }
+
+        return true;
+    }
+</script>
+
+</body>
+</html>
+
