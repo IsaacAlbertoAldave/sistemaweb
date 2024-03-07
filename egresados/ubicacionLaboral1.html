@@ -46,11 +46,11 @@
           </div>
           <div class="col-md-2">
             <div class="form-check">
-              <input class="form-check-input" type="radio" id="cursoSi" name="cursoOpciones" value="Si">
+<input class="form-check-input" type="radio" id="cursoSi" name="cursoOpciones" value="Si" onchange="toggleTextbox('sugerenciaCurso', true)">
               <label class="form-check-label" for="cursoSi">Sí</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" id="cursoNo" name="cursoOpciones" value="No">
+              <input class="form-check-input" type="radio" id="cursoNo" name="cursoOpciones" value="No" onchange="toggleTextbox('sugerenciaCurso', false)">
               <label class="form-check-label" for="cursoNo">No</label>
             </div>
           </div>
@@ -58,7 +58,7 @@
             <label>¿Cuál?</label>
           </div>
           <div class="col-md-5">
-            <textarea id="sugerenciaCurso" name="sugerenciaCurso" rows="2" class="form-control" cols="50"></textarea>
+            <textarea id="sugerenciaCurso" name="sugerenciaCurso" rows="2" class="form-control" cols="50" disabled></textarea>
           </div>
         </div>
         <div class="row mt-3">
@@ -67,11 +67,11 @@
           </div>
           <div class="col-md-2">
             <div class="form-check">
-              <input class="form-check-input" type="radio" id="posgradoSi" name="posgradoOpciones" value="Si">
+              <input class="form-check-input" type="radio" id="posgradoSi" name="posgradoOpciones" value="Si" onchange="toggleTextbox('sugerenciaPosgrado', true)">
               <label class="form-check-label" for="posgradoSi">Sí</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" id="posgradoNo" name="posgradoOpciones" value="No">
+              <input class="form-check-input" type="radio" id="posgradoNo" name="posgradoOpciones" value="No" onchange="toggleTextbox('sugerenciaPosgrado', false)">
               <label class="form-check-label" for="posgradoNo">No</label>
             </div>
           </div>
@@ -79,7 +79,7 @@
             <label>¿Cuál?</label>
           </div>
           <div class="col-md-5">
-            <textarea id="sugerenciaPosgrado" name="sugerenciaPosgrado" rows="2" class="form-control" cols="50"></textarea>
+            <textarea id="sugerenciaPosgrado" name="sugerenciaPosgrado" rows="2" class="form-control" cols="50" disabled></textarea>
           </div>
         </div>
       </div>
@@ -97,11 +97,11 @@
           </div>
           <div class="col-md-2">
             <div class="form-check">
-              <input class="form-check-input" type="radio" id="organizacionSocialSi" name="organizacionSocialOpciones" value="Si">
+              <input class="form-check-input" type="radio" id="organizacionSocialSi" name="organizacionSocialOpciones" value="Si" onchange="toggleTextbox('afiliacionOrganizaciones', true)">
               <label class="form-check-label" for="organizacionSocialSi">Sí</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" id="organizacionSocialNo" name="organizacionSocialOpciones" value="No">
+              <input class="form-check-input" type="radio" id="organizacionSocialNo" name="organizacionSocialOpciones" value="No" onchange="toggleTextbox('afiliacionOrganizaciones', false)">
               <label class="form-check-label" for="organizacionSocialNo">No</label>
             </div>
           </div>
@@ -109,7 +109,7 @@
             <label>¿Cuál?</label>
           </div>
           <div class="col-md-5">
-            <textarea id="afiliacionOrganizaciones" name="afiliacionOrganizaciones" rows="2" class="form-control" cols="50"></textarea>
+            <textarea id="afiliacionOrganizaciones" name="afiliacionOrganizaciones" rows="2" class="form-control" cols="50" disabled></textarea>
           </div>
         </div>
         <div class="row mt-3">
@@ -118,11 +118,11 @@
           </div>
           <div class="col-md-2">
             <div class="form-check">
-              <input class="form-check-input" type="radio" id="organizacionProfesionistaSi" name="organizacionProfesionistaOpciones" value="Si">
+              <input class="form-check-input" type="radio" id="organizacionProfesionistaSi" name="organizacionProfesionistaOpciones" value="Si" onchange="toggleTextbox('afiliacionOrgProfesionista', true)">
               <label class="form-check-label" for="organizacionProfesionistaSi">Sí</label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" id="organizacionProfesionistaNo" name="organizacionProfesionistaOpciones" value="No">
+              <input class="form-check-input" type="radio" id="organizacionProfesionistaNo" name="organizacionProfesionistaOpciones" value="No" onchange="toggleTextbox('afiliacionOrgProfesionista', false)">
               <label class="form-check-label" for="organizacionProfesionistaNo">No</label>
             </div>
           </div>
@@ -130,7 +130,7 @@
             <label>¿Cuál?</label>
           </div>
           <div class="col-md-5">
-            <textarea id="afiliacionOrgProfesionista" name="afiliacionOrgProfesionista" rows="2" class="form-control" cols="50"></textarea>
+            <textarea id="afiliacionOrgProfesionista" name="afiliacionOrgProfesionista" rows="2" class="form-control" cols="50" disabled></textarea>
           </div>
         </div>
       </div>
@@ -145,7 +145,11 @@
           <textarea id="comentarios" name="comentarios" rows="4" cols="80" class="form-control"></textarea>
         </div>
       </div>
-      
     </div>
+    <script>
+      function toggleTextbox(id, enable) {
+         document.getElementById(id).disabled = !enable;
+      }
+    </script>
   </body>
 </html>
